@@ -1,0 +1,361 @@
+/*
+Theme Name: Betty
+Theme URI: http://shtheme.com/demosd/betty
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Description: In 2021, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: betty
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+p.logged-in-as {
+    margin-left: 10px;
+  }
+  
+  .betty-comment-section form input[type="submit"] {
+    margin-left: 15px;
+    border: 1px solid #e52e71;
+      background: #e52e71;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+  }
+  
+  .betty-comment-section form input[type="submit"]:hover, a.more:hover {
+    border: 1px solid #ff8a00;
+    background: #ff8a00;
+  }
+  
+  h3.comment-reply-title, h3.comments-title {
+      color: #e52e71;
+      font-size: 10px;
+      margin-bottom: 20px;
+      text-transform: capitalize;
+  }
+  
+  a.comment-reply-link {
+    color: #e52e71;
+    font-size: 15px;
+  }
+  
+  .betty-user-content h3 a.url {
+    text-transform: capitalize;
+  }
+  
+  .comment-form-cookies-consent {
+    display: none;
+  }
+  
+  a.more {
+    border: 1px solid #e52eab;
+    background: #e52eab;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  a.more:hover {
+    border: 1px solid #ff8a00;
+    background: #ff8a00;
+  }
+  
+  .single-widget {
+    margin-bottom: 60px;
+  }
+  
+  .single-widget h3.widget-title {
+    color: #e52eab;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 15px;
+  }
+  
+  .single-widget.widget_categories ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f5ecef;
+  }
+  
+  .single-widget.widget_categories ul li a {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+  }
+  
+  .single-widget.betty-sidebar-block-latest-posts h3.widget-title {
+    margin-bottom: 25px;
+  }
+  
+  ul.wp-tag-cloud li {
+    display: inline-block;
+    margin: 0 5px 5px 0px;
+  }
+  
+  ul.wp-tag-cloud li a {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #f5ecef;
+    padding: 7px 21px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    text-decoration: none;
+    font-size: 14px!important;
+    color: #666;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+  }
+  
+  ul.wp-tag-cloud li a:hover {
+      background:#e52eab;
+      color: #fff;
+      border-color:#e52eab;
+  }
+  
+  .widget_tag_cloud h3.widget-title {
+    margin-bottom: 25px;
+  }
+  
+  .blog-entry .desc h3 a {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .betty-pagination-wrap li span {
+    background: transparent;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #e52eab;
+    border: 1px solid #e52eab;
+    color: #fff;
+  }
+  
+  .search-custom h4 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
+  
+  .search-custom form.betty-sidebar-search-form {
+    max-width: 70%;
+  }
+  
+  .search-custom form.betty-sidebar-search-form input {
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    height: auto;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #f5ecef;
+    display: block;
+    width: 100%;
+    line-height: 1.75em;
+    font-weight: 400;
+    color: #666;
+    background-image: none;
+    border-radius: 0;
+    outline: none;
+  }
+  
+  .ul1 > li a.active {
+      color: #e52eab;
+      text-decoration: none;
+  }
+  
+  div.gallery.gallery-size-full {
+    display: none;
+  }
+  
+  .logged-in .navbar {
+      top: 32px;
+  }
+  
+  .logged-in .nav-scroll {
+      top: -68px;
+  }
+  
+  .error404 .caption h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+  
+  .error-section .section-title {
+    font-size: 48px;
+      line-height: 1.25em;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      color: #1b1b1b;
+      position: relative;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+  }
+  
+  .error-section .section-title span {
+      font-weight: 600;
+      color: transparent;
+      -webkit-text-stroke: 1px #ccc;
+      opacity: .8;
+      display: block;
+  }
+  
+  .error-section p {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .error-form {
+    position: relative;
+    max-width: 520px;
+    margin: 50px auto 0;
+  }
+  .error-form form {
+      position: relative;
+  }
+  
+  .error-form .form-group {
+      position: relative;
+      margin: 0;
+  }
+  
+  .error-form .form-group input[type="search"] {
+    position: relative;
+    width: 100%;
+    line-height: 30px;
+    padding: 14px 60px 15px 15px;
+    height: 60px;
+    display: block;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    background: #f7f7f7;
+    color: #888;
+    border-radius: 30px;
+    border: 1px solid #f7f7f7;
+    transition: all 300ms ease;
+  }
+  
+  .error-form .form-group .theme-btn {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    background: none;
+    color: #888;
+  }
+  
+  .error-form .form-group .theme-btn:focus {
+    outline: none;
+  }
+  
+  .error-section a.butn {
+    text-transform: capitalize;
+  }
+  
+  .betty-blog .betty-sidebar-part ul {
+    padding-inline-start: 0px;
+  }
+  
+   .betty-contact-form .col-sm-6 > p {
+    display: none;
+   }
+  
+  .betty-contact-form .col-sm-6 .form-group {
+    margin-bottom: 0px;
+  }
+  
+  .betty-contact-form .col-md-12 .your-message, .betty-contact-form .col-sm-12 .your-message {
+    width: 100%;
+  }
+  
+  .betty-contact-form .col-md-12 .your-message textarea {
+    height: 150px;
+  }
+  
+  .betty-contact-form input.butn-dark {
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    -webkit-transition: background-color .15s ease-out;
+    transition: background-color .15s ease-out;
+    background: #e52eab;
+    margin-top: 0px!important;
+  }
+  
+  .betty-contact-form input.butn-dark:hover {
+      background: #ff8a00;
+  }
+  
+  .betty-contact-form input.btn.btn-contact {
+    margin-top: 0px!important
+  }
+  
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: inherit;
+  }
+  
+  @media (min-width: 1200px) {
+    .betty-home-blog .blog-entry a.blog-img {
+      max-height: 219px;
+    }
+  }
+  
+  .pink-bg1 {
+    background-color: #fff9fc;
+  }
+  
+  .betty-services div.col-md-4:hover .item .con {
+    bottom: 0;
+  }
+  .js.elementor-html .animate-box {
+      opacity: 1!important;
+  }
+  .js.elementor-html #betty-hero .flexslider .slider-text {
+      opacity: 1;
+  }
